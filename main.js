@@ -21,19 +21,6 @@ var clickSquare = function(id, color, reMark) {
 
     // save the id array back into localstorage as a string
     localStorage.clicked = JSON.stringify(localStorageClicked);
-
-    // mark the square on the server
-    var markRequest = new XMLHttpRequest();
-    markRequest.open('GET', 'http://localhost:3000/mark/'+id);
-    markRequest.onload = function() {
-        if (markRequest.status === 200) {
-          console.log("marked position")
-        }
-        else {
-          // request failed
-        }
-    };
-    markRequest.send();
   }
 };
 
@@ -47,21 +34,3 @@ localStorageClicked = JSON.parse(localStorage.clicked);
 localStorageClicked.forEach(function(id) {
   clickSquare(id);
 });
-
-// click all the items that others have clicked
-// mark the square on the server
-var getRequest = new XMLHttpRequest();
-getRequest.open('GET', 'http://localhost:3000/get/');
-getRequest.onload = function() {
-    if (getRequest.status === 200) {
-      boardString = getRequest.responseText;
-      board = JSON.parse(boardString);
-      Object.keys(board).forEach(function(id) {
-        clickSquare(id, "#4C2B50", false)
-      });
-    }
-    else {
-      // request failed
-    }
-};
-getRequest.send();
