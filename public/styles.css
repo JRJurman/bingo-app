@@ -1,0 +1,23 @@
+.bingo-header {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bingo-square {
+  padding: 0px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.bingo-square > div {
+  outline: 2px solid #1D2935;
+  padding: 15px;
+  height: 150px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.bingo-square:hover {
+  background-color: #547696;
+}

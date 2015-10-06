@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- index.html -->
+<!-- created by Jesse Jurman -->
+<html>
+  <head>
+
+    <title>Bingo Web App</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/superhero/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- favicon -->
+    <!-- <link rel="icon" type="image/png" href="favicon.png" /> -->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-2 bingo-header">B</div>
+        <div class="col-xs-2 bingo-header">I</div>
+        <div class="col-xs-2 bingo-header">N</div>
+        <div class="col-xs-2 bingo-header">G</div>
+        <div class="col-xs-2 bingo-header">O</div>
+        <div class="col-xs-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="11">
+          A company with the word "Synergy" on their material
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="12">
+          Government recruiter saying "It's classified"
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="13">
+          Student explaining the colored dots
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="14">
+          Someone who hasn't shaved but should
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="15">
+          An art student complaining about the lack of employers
+          </div>
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="21">
+          Girl wearing a skirt that is entirely too short
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="22">
+          Recruiter playing career fair bingo
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="23">
+          Freshman in shorts and a t-shirt
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="24">
+          Student mentioning HvZ as an extra curricular
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="25">
+          An RIT alumni
+          </div>
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="31">
+          Recruiter giving out some kind of electronic device
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="32">
+          Recruiter frantically scribbling notes
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="33">
+          Pens with the company name (Free Space)
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="34">
+          White socks with black dress pants
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="35">
+          Tennis shoes with dress pants
+          </div>
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="41">
+          Someone fist-bumping a recruiter
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="42">
+          Long lines by the Google table
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="43">
+          Kid wearing a fedora or tribly
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="44">
+          Company with an inappropriate sounding slogan
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="45">
+          Student dropping a pile of resumes
+          </div>
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="51">
+          Someone fist pumping after getting an interview
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="52">
+          A shirt with sweat stains
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="53">
+          Someone overdressed in a tux
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="54">
+          A recruiter with a clipboard
+          </div>
+        </div>
+        <div class="col-xs-2 bingo-square" onClick="clickSquare()">
+          <div id="55">
+          Students bragging about who got more interviews
+          </div>
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
