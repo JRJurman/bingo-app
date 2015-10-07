@@ -37,9 +37,6 @@ var clickSquare = function(id, color, reMark) {
   }
 };
 
-// apply click function to all bingo squares
-document.getElementsByClassName("bingo-square").click = clickSquare
-
 // turn localstorage from string to javascript object
 localStorageClicked = JSON.parse(localStorage.clicked);
 
