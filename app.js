@@ -32,6 +32,12 @@ app.get("/get", function(req, res){
   res.send("" + JSON.stringify(board));
 });
 
+app.get("/clear", function(req, res){
+  board = {};
+  res.send("" + JSON.stringify(board));
+});
+
+
 http.listen(3000, function () {
   console.log('Example app listening');
 });

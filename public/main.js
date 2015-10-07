@@ -24,7 +24,7 @@ var clickSquare = function(id, color, reMark) {
 
     // mark the square on the server
     var markRequest = new XMLHttpRequest();
-    markRequest.open('GET', 'http://localhost:3000/mark/'+id);
+    markRequest.open('GET', '/mark/'+id);
     markRequest.onload = function() {
         if (markRequest.status === 200) {
           console.log("marked position")
@@ -49,9 +49,8 @@ localStorageClicked.forEach(function(id) {
 });
 
 // click all the items that others have clicked
-// mark the square on the server
 var getRequest = new XMLHttpRequest();
-getRequest.open('GET', 'http://localhost:3000/get/');
+getRequest.open('GET', '/get/');
 getRequest.onload = function() {
     if (getRequest.status === 200) {
       boardString = getRequest.responseText;
@@ -65,3 +64,21 @@ getRequest.onload = function() {
     }
 };
 getRequest.send();
+
+var clearServer = function() {
+  var getRequest = new XMLHttpRequest();
+  getRequest.open('GET', '/clear');
+  getRequest.onload = function() {
+      if (getRequest.status === 200) {
+        boardString = getRequest.responseText;
+        board = JSON.parse(boardString);
+        Object.keys(board).forEach(function(id) {
+          clickSquare(id, "#4C2B50", false)
+        });
+      }
+      else {
+        // request failed
+      }
+  };
+  getRequest.send();
+}
