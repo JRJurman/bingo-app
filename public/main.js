@@ -62,7 +62,7 @@ getRequest.onload = function() {
 };
 getRequest.send();
 
-var clear = function() {
+var clearBoard = function() {
   var getRequest = new XMLHttpRequest();
   getRequest.open('GET', '/clear');
   getRequest.onload = function() {
