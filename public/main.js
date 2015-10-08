@@ -62,20 +62,17 @@ getRequest.onload = function() {
 };
 getRequest.send();
 
-var clearServer = function() {
+var clear = function() {
   var getRequest = new XMLHttpRequest();
   getRequest.open('GET', '/clear');
   getRequest.onload = function() {
       if (getRequest.status === 200) {
-        boardString = getRequest.responseText;
-        board = JSON.parse(boardString);
-        Object.keys(board).forEach(function(id) {
-          clickSquare(id, "#4C2B50", false)
-        });
+        console.log("board cleared")
       }
       else {
         // request failed
       }
   };
   getRequest.send();
+  localStorage.clicked = "[]"
 }
